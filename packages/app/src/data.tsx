@@ -1,4 +1,3 @@
-import "@fontsource/archivo";
 let projects = [
   {
     name: "守護者聯盟2.0",
@@ -43,7 +42,6 @@ let projects = [
     banner: "https://i.imgur.com/J428et3.jpg",
     recipientId: 3,
     id: "3",
-    
   },
   {
     name: "透明足跡",
@@ -75,7 +73,6 @@ let projects = [
     recipientId: 5,
     id: "5",
   },
-
   {
     name: "FinTech大聯盟",
     tagline:
@@ -91,7 +88,6 @@ let projects = [
     recipientId: 6,
     id: "6",
   },
-
   {
     name: "海闊天空隊",
     tagline:
@@ -130,9 +126,8 @@ export function getProjects() {
 }
 
 export function getRecipientIdbyId(id) {
-  console.log(id)
+  console.log(id);
   const p = projects.find((p) => p.id === id);
-  
 
   return p.recipientId;
 }
@@ -140,16 +135,16 @@ export function getRecipientIdbyId(id) {
 export function getProject(id: string) {
   return (
     projects.find((p) => p.id === id) ?? {
-      name: "404 Project not found",
-      id: id,
-      recipientId: 0,
-      address: "404 Address not found",
-      url: "404 URL not found",
-      description: "404 Description not found",
-      banner: "https://source.unsplash.com/random",
-      logo: "https://source.unsplash.com/random",
+      projectName: "404 Project not found",
       tagline: "404 Tagline not found",
-      problemSpace: "404 Problem space not found",
+      description: "404 Description not found",
+      ethereumAddress: "404 Address not found",
+      website: "404 URL not found",
+      thumbnailImageLink: "https://source.unsplash.com/random",
+      logoCdnUrl: "https://source.unsplash.com/random",
+      bannerImageLink: "https://source.unsplash.com/random",
+      recipientId: 0,
+      id: "0",
     }
   );
 }
